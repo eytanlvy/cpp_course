@@ -17,10 +17,12 @@ class Cell
 		void connect (Cell *new_next);
 		void disconnectNext();
 		void disconnectPrev();
-		int getData() const { return data; };
+		int const getData() const { return data; };
 		void setData(int d) { data = d; };
-		Cell *getNext() const { return next; };   //todo: implement setters to prevent from modifying the getters
-		Cell *getPrev() const { return prev; };
+		Cell * const getNext() const { return next; };
+		void setNext(Cell *n) { next = n; };
+		Cell * const getPrev() const { return prev; };
+		void setPrev(Cell *p) { prev = p; };
 		virtual ~Cell();
 };
 

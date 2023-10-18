@@ -1,15 +1,19 @@
-CPP=g++ --std=c++11 -Wall
+CPP = g++ -std=c++11 -Wall
+OBJS = cell.o list.o  # Liste de tous les fichiers objets nécessaires
 
-all : cell
+all: cell
 
-cell : cell.o
-	$(CPP) -o cell cell.o
+cell: $(OBJS)
+	$(CPP) -o cell $(OBJS)
 
-cell.o : cell.cpp
+cell.o: cell.cpp
 	$(CPP) -c cell.cpp
 
-clean :
-	rm *.o
+list.o: list.cpp
+	$(CPP) -c list.cpp
 
-fclean : clean
-	rm cell
+clean:
+	rm -f *.o
+
+fclean: clean
+	rm -f cell

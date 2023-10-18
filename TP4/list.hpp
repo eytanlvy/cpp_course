@@ -19,10 +19,10 @@ class List
 		void set(int idx, int val);
 		void insert(int idx, int val);
 		void del(int idx);
-		Cell *getFirst() const { return first; };  //todo: implement setters to prevent from modifying the getters
-		Cell *getLast() const { return last; };
-
-
+		Cell * const getFirst() const { return first; };
+		void setFirst(Cell *f) { first = f; };
+		Cell * const getLast() const { return last; };
+		void setLast(Cell *l) { last = l; };
 };
 ostream& operator<<( ostream &out , const List &x );
 

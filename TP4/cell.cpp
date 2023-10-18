@@ -44,8 +44,7 @@ Cell::~Cell()
 	cout << "Cellule détruite: " << *this << endl;
 }
 
-ostream& operator<<( ostream &out , const Cell &x )
-{
-	out << x.getData() << " | prev: " << x.getPrev() << " | next: " << x.getNext() << endl ;
-	return out ;
+ostream& operator<<(ostream &out, const Cell &x) {
+	out << x.getData();
+    return out;
 }
