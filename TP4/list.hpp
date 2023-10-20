@@ -23,6 +23,7 @@ class List
 		void setFirst(Cell *f) { first = f; };
 		Cell * const getLast() const { return last; };
 		void setLast(Cell *l) { last = l; };
+	friend class Cell;
 };
 ostream& operator<<( ostream &out , const List &x );
 

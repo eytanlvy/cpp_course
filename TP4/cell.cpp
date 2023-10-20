@@ -10,17 +10,14 @@ Cell::Cell (int d) : data{d}, next{nullptr}, prev{nullptr}
 	cout << "Cellule créée: " << *this << endl;
 }
 
-void	connect (Cell *first, Cell *second)
-{
-	first->next = second;
-	second->prev = first;
-}
-
 void	Cell::connect (Cell *new_next)
 {
+	cout << "in connect" << endl;
 	new_next->prev = this;
+	cout << "Cellule connectée: " << *this << " -> " << *new_next << endl;
 	this->next = new_next;
 }
+
 void	Cell::disconnectNext()
 {
 	if (this->next != nullptr)

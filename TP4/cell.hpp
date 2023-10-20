@@ -6,23 +6,26 @@ using namespace std;
 
 class Cell
 {
+	friend class List;
+
 	private:
 		int data;
 		Cell *next;
 		Cell *prev;
-	public:
-		Cell (int d, Cell *n, Cell *p);
-		Cell (int d);
-		friend void connect (Cell *first, Cell *second);
+
 		void connect (Cell *new_next);
 		void disconnectNext();
 		void disconnectPrev();
-		int const getData() const { return data; };
 		void setData(int d) { data = d; };
-		Cell * const getNext() const { return next; };
 		void setNext(Cell *n) { next = n; };
-		Cell * const getPrev() const { return prev; };
 		void setPrev(Cell *p) { prev = p; };
+
+		Cell (int d, Cell *n, Cell *p);
+		Cell (int d);
+	public:
+		int const getData() const { return data; };
+		Cell * const getNext() const { return next; };
+		Cell * const getPrev() const { return prev; };
 		virtual ~Cell();
 };
 
