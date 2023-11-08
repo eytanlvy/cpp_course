@@ -12,7 +12,6 @@ class Urne {
 		Scrutin& scrutin;
 		int num;
 		std::vector <Choix> votes;
-		bool * fini_ptr;
 		Urne (Scrutin& scrutin);
 		virtual ~Urne();
 
