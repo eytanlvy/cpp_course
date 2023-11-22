@@ -5,7 +5,7 @@ Triangle::Triangle(Vecteur a, Vecteur b, Vecteur c): Figure("Triangle"), a(a), b
 }
 
 std::ostream& operator<<( std::ostream &out , const Triangle &x ) {
-	out << "Triangle "<< x.get_nom() << "(" << x.get_a() << ", " << x.get_b() << ", " << x.get_c() << ")";
+	out << x.get_nom() << "(" << x.get_a() << ", " << x.get_b() << ", " << x.get_c() << ")";
 	return out;
 }
 
